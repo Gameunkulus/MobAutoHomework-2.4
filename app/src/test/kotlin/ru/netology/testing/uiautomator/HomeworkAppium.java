@@ -2,6 +2,8 @@ package ru.netology.testing.uiautomator;public class HomeworkAppium {
 }
 // This sample code supports Appium Java client >=9
 // https://github.com/appium/java-client
+// This sample code supports Appium Java client >=9
+// https://github.com/appium/java-client
 import io.appium.java_client.remote.options.BaseOptions;
         import io.appium.java_client.android.AndroidDriver;
         import java.net.URL;
@@ -42,12 +44,10 @@ public class SampleTest {
 
     @Test
     public void sampleTest() {
-        var el8 = driver.findElement(AppiumBy.id("ru.netology.testing.uiautomator:id/userInput"));
-        el8.sendKeys("netology");
-        var el9 = driver.findElement(AppiumBy.id("ru.netology.testing.uiautomator:id/buttonActivity"));
-        el9.click();
-        var el10 = driver.findElement(AppiumBy.id("ru.netology.testing.uiautomator:id/text"));
-        Assert.assertEquals("netology", el10.getText());
+        var el2 = driver.findElement(AppiumBy.id("ru.netology.testing.uiautomator:id/userInput"));
+        el2.sendKeys("");
+        var el3 = driver.findElement(AppiumBy.id("ru.netology.testing.uiautomator:id/buttonChange"));
+        Assert.assertEquals("", el3.getText());
     }
 
     @After
